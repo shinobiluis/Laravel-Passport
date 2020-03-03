@@ -41,5 +41,12 @@
             @endforeach
         </tbody>
     </table>
+
+    <h2>Personal Access Tokens</h2>
+    <form action="{{ url('/oauth/personal-access-tokens') }}" method="post">
+        @csrf
+        <input type="text" name="name" id="" placeholder="Nombre">
+        <input type="submit" value="Crear">
+    </form>
 </body>
 </html>
