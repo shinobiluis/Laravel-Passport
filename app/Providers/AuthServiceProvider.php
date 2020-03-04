@@ -28,6 +28,11 @@ class AuthServiceProvider extends ServiceProvider
         
         Passport::routes(); //agregamos passport a las rutas
 
+        Passport::tokensCan([
+            'get-posts' => 'Obtener publicaciones',
+            'get-two-posts' => 'Obtener 2 publicaciones',
+        ]);
+
         //
     }
 }
