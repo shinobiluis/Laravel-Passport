@@ -23,7 +23,7 @@ Route::get('posts', function(){
 
 Route::get('clients/posts', function(){
     return App\Post::all();
-})->middleware('client'); //el middleware client que apenas creamos
+})->middleware('auth:api'); //el middleware client que apenas creamos
 
 Route::post('clients/posts', function(Request $request){
     App\Post::create([
